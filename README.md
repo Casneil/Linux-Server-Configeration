@@ -5,7 +5,7 @@ The aim of this project was to set up a Linux server to host web applications.Th
 
 The [Items-Catalog](https://github.com/Casneil/Items-Catalog)  is a RESTful web application that displays items, shops and also allow users to login, add, delete and edit items or shops they add. The CRUD (create, read, update and delete) operations and web page templates are handled using Python Flask framework. OAuth 2.0 framework allows users to securely login to the application using Google Sign-in so users can create items that are viewable by everyone but only modifiable by the original creator.
 
-### Setting up the Amazon's Lightsail Instance 
+###1 - Setting up the Amazon's Lightsail Instance 
 
 * In your browser go to [Amazon's Lightsail Site](https://lightsail.aws.amazon.com) and register if you dont have an existing account already.
 
