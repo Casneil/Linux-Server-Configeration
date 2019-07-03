@@ -84,6 +84,6 @@ The [Items-Catalog](https://github.com/Casneil/Items-Catalog)  is a RESTful web 
 
 ### 8-Deploy the project
 
-## Change the time zone 
+#### Change the time zone 
 *
 
