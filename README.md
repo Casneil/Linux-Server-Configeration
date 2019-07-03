@@ -7,6 +7,6 @@ The [Items-Catalog](https://github.com/Casneil/Items-Catalog)  is a RESTful web 
 
 # Setting up the Amazon's Lightsail Instance 
 
-1. In your browser go to [Amazon's Lightsail Site](https://lightsail.aws.amazon.com) and register if you dont have an existing account already.
+* In your browser go to [Amazon's Lightsail Site](https://lightsail.aws.amazon.com) and register if you dont have an existing account already.
 
-2. Once you're able to sign in  to your account and navigate to the button that says create an instance. Click to create a instance and choose Ubuntu asthe instance Image and **OS** only as **Blueprint** Choose **Ubuntu 18.04 LTS**.  
+* Once you're able to sign in  to your account and navigate to the button that says create an instance. Click to create a instance and choose Ubuntu asthe instance Image and **OS** only as **Blueprint** Choose **Ubuntu 18.04 LTS**.  
