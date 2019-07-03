@@ -17,11 +17,11 @@ The [Items-Catalog](https://github.com/Casneil/Items-Catalog)  is a RESTful web 
 
 * Change the private key file permission not to be accessible by others **sudo chmod 600 LightsailDefaultPrivateKey-us-west-2.pem**.
 
-### 3-Connecting to the Server via SSh
+### 3-Connecting to the Server via SSH
 
 * Now log in from your terminal ssh ubuntu@3.121.84.110 -p 22 -i ~/.ssh/LightsailDefaultPrivateKey-us-west-2.pem.
 
 ### 4-Install updates
 
-*  Updates the list of available packages and versions for upgrade >sudo apt-get update
-*  Installs newer versions of the packages >sudo apt-get upgrade
+*  Updates the list of available packages and versions for upgrade > sudo apt-get update
+*  Installs newer versions of the packages > sudo apt-get upgrade
