@@ -55,9 +55,9 @@ The [Items-Catalog](https://github.com/Casneil/Items-Catalog)  is a RESTful web 
            touch .ssh/authorized_keys
            nano .ssh/authorized_keys
 
- Copy the public key content from local machine to this file and save, change the access level
- chmod 700 .ssh
- chmod 644 .ssh/authorized_keys`
+           `Copy the public key content from local machine to this file and save, change the access level
+           chmod 700 .ssh
+           chmod 644 .ssh/authorized_keys
 
 
 ### 7-Disabling SSH port 22
@@ -79,4 +79,4 @@ The [Items-Catalog](https://github.com/Casneil/Items-Catalog)  is a RESTful web 
             sudo ufw enable
             sudo ufw status
 
-*  SSH into grader using the key on port 2200 `ssh grader@52.26.30.44 -p 2200 -i ~/.ssh/grader_keys
+*  SSH into grader using the key on port 2200 `ssh grader@52.26.30.44 -p 2200 -i ~/.ssh/grader_keys`
