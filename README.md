@@ -85,5 +85,18 @@ The [Items-Catalog](https://github.com/Casneil/Items-Catalog)  is a RESTful web 
 ## 8-Deploy the project
 
 #### Change the time zone 
-*
+*  Check current timezone setting `sudo cat /etc/timezone
+*  Configure the local timezone to UTC `sudo dpkg-reconfigure tzdata
 
+#### Install and configure Apache to serve a Python mod_wsgi application
+*  Install mod_wsgi `sudo apt-get install libapache2-mod-wsgi
+*  Install Apache `sudo apt-get install apache2
+
+#### Install and configure Postgresql
+
+          sudo apt-get install libpq-dev python3-dev
+          sudo apt-get install postgresql postgresql-contrib
+          sudo su - postgres
+          psql
+          
+*  Then:          
