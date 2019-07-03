@@ -26,6 +26,23 @@ The [Items-Catalog](https://github.com/Casneil/Items-Catalog)  is a RESTful web 
            sudo apt-get update
 *  Updates the list of available packages and versions for upgrade.   
             
-            sudo apt-get upgrade
+           sudo apt-get upgrade
 *  Installs newer versions of the packages. 
+
+### 5-Create user grader
+
+           sudo adduser grader
+*  Create new user grader
+
+           sudo touch /etc/sudoers.d/grader
+*  Give grader the permission to sudo        
+           
+           sudo ls /etc/sudoers.d
+*  Check if grader file was added in sudoers directory
+
+           sudo nano /etc/sudoers.d/grader
+*  Edit the file grader to add the sudo access 
+
+      grader ALL=(ALL) NOPASSWD:ALL
+      Save changes(Ctrl+X, Ctrl+Y, Enter)
             
