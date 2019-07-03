@@ -23,8 +23,9 @@ The [Items-Catalog](https://github.com/Casneil/Items-Catalog)  is a RESTful web 
 
 ### 4-Install updates
 
-*  Updates the list of available packages and versions for upgrade.
-          sudo apt-get update
-
-*  Installs newer versions of the packages. 
+           sudo apt-get update
+*  Updates the list of available packages and versions for upgrade.   
+            
             sudo apt-get upgrade
+*  Installs newer versions of the packages. 
+            
