@@ -41,4 +41,40 @@ The [Items-Catalog](https://github.com/Casneil/Items-Catalog)  is a RESTful web 
 
       grader ALL=(ALL) NOPASSWD:ALL
       Save changes(Ctrl+X, Ctrl+Y, Enter)
-            
+
+
+### 6-Generate SSH key for grader
+
+*  On the local machine terminal, generate key pair using `ssh-keygen`, providing passphrase
+*  Name it grader_keys.pub
+*  Save the private key in `~/.ssh` on local machine
+*  On the server instance:
+
+`su - grader
+ mkdir .ssh
+ touch .ssh/authorized_keys
+ nano .ssh/authorized_keys
+
+ Copy the public key content from local machine to this file and save, change the access level
+ chmod 700 .ssh
+ chmod 644 .ssh/authorized_keys`
+
+
+### 7-Disabling SSH port 22
+
+*  Configure the Lightsail firewall in AWS console to allow port 2200 ssh connections
+*  Make changes in the config file in the server from port 22 to 2200 `sudo nano /etc/ssh/sshd_config`
+*  Restart SSH `sudo service ssh restart`
+*  Configure the Lightsail firewall in AWS console to allow incoming conections into ports HTTP (port 80), and NTP (port 123)
+*  Configure the Uncomplicated Firewall (UFW) to only allow incoming connections for SSH (port 2200), HTTP (port 80), and NTP (port 123)
+
+`sudo ufw allow 2200/tcp
+ sudo ufw allow www
+ sudo ufw allow 123/udp
+ sudo ufw deny 22
+ sudo ufw default deny incoming
+ sudo ufw default allow outgoing
+ sudo ufw enable
+ sudo ufw status`
+
+*  SSH into grader using the key on port 2200 `ssh grader@52.26.30.44 -p 2200 -i ~/.ssh/grader_keys`
