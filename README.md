@@ -23,25 +23,21 @@ The [Items-Catalog](https://github.com/Casneil/Items-Catalog)  is a RESTful web 
 
 ### 4-Install updates
 
-           sudo apt-get update
-*  Updates the list of available packages and versions for upgrade.   
+          
+*  Updates the list of available packages and versions for upgrade.`sudo apt-get update`   
             
-           sudo apt-get upgrade
-*  Installs newer versions of the packages. 
+*  Installs newer versions of the packages.`sudo apt-get upgrade` 
 
 ### 5-Create user grader
-
-           sudo adduser grader
-*  Create new user grader
-
-           sudo touch /etc/sudoers.d/grader
-*  Give grader the permission to sudo        
            
-           sudo ls /etc/sudoers.d
-*  Check if grader file was added in sudoers directory
+           
+*  Create new user grader`sudo adduser grader`
 
-           sudo nano /etc/sudoers.d/grader
-*  Edit the file grader to add the sudo access 
+*  Give grader the permission to sudo`sudo touch /etc/sudoers.d/grader`                   
+           
+*  Check if grader file was added in sudoers directory`sudo ls /etc/sudoers.d`
+           
+*  Edit the file grader to add the sudo access`sudo nano /etc/sudoers.d/grader` 
 
       grader ALL=(ALL) NOPASSWD:ALL
       Save changes(Ctrl+X, Ctrl+Y, Enter)
