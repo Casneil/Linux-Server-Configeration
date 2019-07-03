@@ -11,8 +11,17 @@ The [Items-Catalog](https://github.com/Casneil/Items-Catalog)  is a RESTful web 
 
 * Once you're able to sign in  to your account and navigate to the button that says create an instance. Click to create a instance and choose Ubuntu asthe instance Image and **OS** only as **Blueprint** Choose **Ubuntu 18.04 LTS**.  
 
+### 2-Getting the SSH Key
+
 * Navigate to the [Account section](https://lightsail.aws.amazon.com/ls/webapp/account/profile) and download the SSH Key to your local maschine then save it under your .ssh directory on Linux ("maybe different for other operating systmes"). 
 
 * Change the private key file permission not to be accessible by others **sudo chmod 600 LightsailDefaultPrivateKey-us-west-2.pem**.
 
+### 3-Connecting to the Server via SSh
+
 * Now log in from your terminal ssh ubuntu@3.121.84.110 -p 22 -i ~/.ssh/LightsailDefaultPrivateKey-us-west-2.pem.
+
+### 4-Install updates
+
+*  Updates the list of available packages and versions for upgrade >sudo apt-get update
+*  Installs newer versions of the packages >sudo apt-get upgrade
