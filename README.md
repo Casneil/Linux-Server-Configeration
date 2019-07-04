@@ -184,15 +184,10 @@ The [Items-Catalog](https://github.com/Casneil/Items-Catalog)  is a RESTful web 
 ## Resources
 
 [Flask msgi_mod](http://flask.pocoo.org/docs/0.12/deploying/mod_wsgi/)
-
 [Apache Server Configuration](https://httpd.apache.org/docs/current/configuring.html)
-
 [Ask Ubuntu](https://askubuntu.com/)
-
-[Udacity Knowledge](https://knowledge.udacity.com/?nanodegree=5d0abf4a-496f-11e8-b517-e31790f491a9&project=9bf8bb0e-83f2-11e8-a3f4-6b225c520ab1)
-
+[Udacity Knowledge](https://knowledge.udacity.com/)
 [DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-14-04-lts)
-
 [Postgres](https://www.postgresql.org/docs/current/sql-createuser.html)
 
 
