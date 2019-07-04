@@ -124,7 +124,7 @@ The [Items-Catalog](https://github.com/Casneil/Items-Catalog)  is a RESTful web 
           
 *  Rename application.py to init.py
          
-         sudo mv projectFinal.py __init__.py
+         sudo mv application.py __init__.py
  
           
 *  Add this to the `catalog.wsgi` file:          
