@@ -183,7 +183,7 @@ The [Items-Catalog](https://github.com/Casneil/Items-Catalog)  is a RESTful web 
           
 ## Resources
 
-[Flask msgi_mod](http://flask.pocoo.org/docs/0.12/deploying/mod_wsgi/)
+[Flask msgi_mod](http://flask.pocoo.org/docs/0.12/deploying/mod_wsgi/) ./
 [Apache Server Configuration](https://httpd.apache.org/docs/current/configuring.html)
 [Ask Ubuntu](https://askubuntu.com/)
 [Udacity Knowledge](https://knowledge.udacity.com/)
