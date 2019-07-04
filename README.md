@@ -82,7 +82,7 @@ The [Items-Catalog](https://github.com/Casneil/Items-Catalog)  is a RESTful web 
            sudo ufw enable
            sudo ufw status
 
-*  SSH into grader using the key on port 2200 `ssh grader@52.26.30.44 -p 2200 -i ~/.ssh/grader_keys`
+*  SSH into grader using the key on port 2200 `ssh grader@52.26.30.44 -p 2200 -i ~/.ssh/grader_keys1`
 
 
 ## 8-Deploy the project
