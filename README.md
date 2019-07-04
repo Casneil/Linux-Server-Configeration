@@ -18,7 +18,8 @@ The [Items-Catalog](https://github.com/Casneil/Items-Catalog)  is a RESTful web 
 
 * Navigate to the [Account section](https://lightsail.aws.amazon.com/ls/webapp/account/profile) and download the SSH Key to your local maschine then save it under your .ssh directory on Linux ("maybe different for other operating systmes"). 
 
-* Change the private key file permission not to be accessible by others **sudo chmod 600 LightsailDefaultPrivateKey-us-west-2.pem**.
+* Change the private key file permission not to be accessible by others **sudo chmod 600 LightsailDefaultPrivateKey-us-west-2.pem**,
+ I renamed my key to "LightsailKey".
 
 ## 3-Connecting to the Server via SSH
 
