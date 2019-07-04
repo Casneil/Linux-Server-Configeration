@@ -91,6 +91,7 @@ The [Items-Catalog](https://github.com/Casneil/Items-Catalog)  is a RESTful web 
 #### Install and configure Apache to serve a Python mod_wsgi application
 *  Install mod_wsgi `sudo apt-get install libapache2-mod-wsgi
 *  Install Apache `sudo apt-get install apache2
+*  Your **Instance ip address** should now show the Apache2 default page
 
 #### Install and configure Postgresql
 
@@ -99,4 +100,87 @@ The [Items-Catalog](https://github.com/Casneil/Items-Catalog)  is a RESTful web 
           sudo su - postgres
           psql
           
-*  Then:          
+*  Then: 
+
+          CREATE USER catalog WITH PASSWORD 'password';
+          CREATE DATABASE catalog WITH OWNER catalog;
+          \c catalog
+          REVOKE ALL ON SCHEMA public FROM public;
+          GRANT ALL ON SCHEMA public TO catalog;
+          \q
+          exit
+
+## 9-Cloning the Items-Catalog from Github [this:](https://github.com/Casneil/Items-Catalog) 
+
+*  Create a directory for the Items-Catalog like so:
+
+          cd /var/www/
+          sudo mkdir catalog
+          sudo chown grader:grader catalog
+          git clone (your_repo_url) catalog
+          cd catalog
+          sudo nano catalog.wsgi
+          
+*  Add this to the `catalog.wsgi` file:          
+
+          import sys
+          sys.stdout = sys.stderr
+          activate_this = '/var/www/catalog/env/bin/activate_this.py'
+          with open(activate_this) as file_:
+              exec(file_.read(), dict(__file__=activate_this))
+          sys.path.insert(0,"/var/www/catalog")
+
+          from app import app as application
+          
+ ## 10-Installing the virtual environment and application imports 
+ 
+          sudo apt-get install python3-pip
+          sudo -H pip3 install virtualenv
+          virtualenv env
+          source env/bin/activate
+          
+  #### Imports 
+  
+          pip3 install flask packaging oauth2client redis passlib flask-httpauth
+          pip3 install sqlalchemy flask-sqlalchemy psycopg2 bleach requests  
+          
+          
+#### Enable the catalog app       
+
+          sudo nano /etc/apache2/sites-available/catalog.conf
+
+*  then add this to the file:
+
+          <VirtualHost *:80>
+              ServerName 52.26.30.44
+              ServerAdmin sarithakamath24@gmail.com
+              WSGIScriptAlias / /var/www/catalog.wsgi
+              <Directory /var/www/catalog/>
+                  Order allow,deny
+                  Allow from all
+              </Directory>
+              Alias /static /var/www/catalog/static
+              <Directory /var/www/catalog/static/>
+                  Order allow,deny
+                  Allow from all
+              </Directory>
+              ErrorLog ${APACHE_LOG_DIR}/error.log
+              LogLevel warn
+              CustomLog ${APACHE_LOG_DIR}/access.log combined
+           </VirtualHost>
+
+*  Save file then run this:
+
+           sudo a2dessite 000-default.conf
+           sudo a2ensite catalog.conf
+           
+           
+  ## 11- Reload & Restart Apache Server
+  
+          sudo service apache2 reload
+          sudo service apache2 restart
+          
+          
+## Resources
+
+
