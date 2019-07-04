@@ -121,6 +121,12 @@ The [Items-Catalog](https://github.com/Casneil/Items-Catalog)  is a RESTful web 
           cd catalog
           sudo nano catalog.wsgi
           
+          
+*  Rename application.py to init.py
+         
+         sudo mv projectFinal.py __init__.py
+ 
+          
 *  Add this to the `catalog.wsgi` file:          
 
           import sys
@@ -130,7 +136,8 @@ The [Items-Catalog](https://github.com/Casneil/Items-Catalog)  is a RESTful web 
               exec(file_.read(), dict(__file__=activate_this))
           sys.path.insert(0,"/var/www/catalog")
 
-          from app import app as application
+          from __init__.py import app as application
+          application.secret_key = 'super_secret_key
           
  ## 10-Installing the virtual environment and application imports 
  
@@ -183,7 +190,7 @@ The [Items-Catalog](https://github.com/Casneil/Items-Catalog)  is a RESTful web 
           
 ## Resources
 
-[Flask msgi_mod](http://flask.pocoo.org/docs/0.12/deploying/mod_wsgi/) ./
+[Flask msgi_mod](http://flask.pocoo.org/docs/0.12/deploying/mod_wsgi/) 
 [Apache Server Configuration](https://httpd.apache.org/docs/current/configuring.html)
 [Ask Ubuntu](https://askubuntu.com/)
 [Udacity Knowledge](https://knowledge.udacity.com/)
