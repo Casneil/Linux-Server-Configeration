@@ -66,8 +66,8 @@ The [Items-Catalog](https://github.com/Casneil/Items-Catalog)  is a RESTful web 
 ## 7-Disabling SSH port 22
 
 *  Configure the Lightsail firewall in AWS console to allow port 2200 ssh connections
-*  Make changes in the config file in the server from port 22 to 2200 `sudo nano /etc/ssh/sshd_config
-*  Restart SSH `sudo service ssh restart
+*  Make changes in the config file in the server from port 22 to 2200 `sudo nano /etc/ssh/sshd_config`
+*  Restart SSH `sudo service ssh restart`
 *  Configure the Lightsail firewall in AWS console to allow incoming conections into ports HTTP (port 80), and NTP
    (port 123)
 *  Configure the Uncomplicated Firewall (UFW) to only allow incoming connections for SSH (port 2200), HTTP (port 80),
