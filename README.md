@@ -140,7 +140,7 @@ The [Items-Catalog](https://github.com/Casneil/Items-Catalog)  is a RESTful web 
           sys.path.insert(0,"/var/www/catalog")
 
           from __init__.py import app as application
-          application.secret_key = 'super_secret_key
+          application.secret_key = '4580bfba153d29c6159ac8708425cc06
           
  ## 10-Installing the virtual environment and application imports 
  
